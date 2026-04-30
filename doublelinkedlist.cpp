@@ -126,5 +126,27 @@ public:
             current = current->next;
         }
     }
-    
+    void revTraverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        Node *current = START;
+        while (current->next != NULL)
+        {
+            current = current->next;
+        }
+
+        cout << "\nRecords in descending order:\n";
+
+        while (current != NULL)
+        {
+            cout << current->noMhs << " ";
+            current = current->prev;
+        }
+    }
+
 }
